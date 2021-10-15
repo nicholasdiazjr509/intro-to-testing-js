@@ -38,14 +38,16 @@ describe('sayHello', function (){
 //    What other tests and implementation cycles should you do for isFive?
 //    Ensure that isFive returns a boolean no matter what the input
 // Ensure that isFive returns true when passed 5
-// What about if we pass in the string "5"? Do you want isFive to return true for that?
+// What about if we pass in the string "5"?
+// Do you want isFive to return true for that?
 //    If so, write the test, ensure that the test is failing, and then write the implementation
 // Commit your work to git and push to GitHub before moving forward.
+
 describe('isFive', function () {
-    it('should return', function () {
+    it('should be defined as an empty function', function () {
         expect(typeof isFive()).not.toBe('');
     })
-    it('boolean', function (){
+    it('should be defined as a boolean', function (){
                 expect(typeof isFive()).toBe('boolean')
 
     })
