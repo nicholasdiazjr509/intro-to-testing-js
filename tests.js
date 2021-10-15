@@ -37,7 +37,7 @@ describe('sayHello', function (){
 //    Now, refresh report.html to ensure that all tests are green.
 //    What other tests and implementation cycles should you do for isFive?
 //    Ensure that isFive returns a boolean no matter what the input
-// Ensure that isFive returns true when passed 5
+//      Ensure that isFive returns true when passed 5
 // What about if we pass in the string "5"?
 // Do you want isFive to return true for that?
 //    If so, write the test, ensure that the test is failing, and then write the implementation
@@ -45,11 +45,28 @@ describe('sayHello', function (){
 
 describe('isFive', function () {
     it('should be defined as an empty function', function () {
-        expect(typeof isFive()).not.toBe('');
+        expect(typeof isFive).toBe('function');
     })
-    it('should be defined as a boolean', function (){
-                expect(typeof isFive()).toBe('boolean')
+    it('should  pass in the string 5? ', function () {
+        expect(typeof isFive(5)).toBe('boolean')
+        //Ensure that isFive returns a boolean no matter what the input
+    })
+        it('should return a false when a 5 is passed', function(){
+            expect( typeof isFive(5) .toBe(''))
+    })
+    it("should return true or false when passed a '5' ", function() {
+        expect(typeof isFive('')).toBe('boolean')
+//Ensure that isFive returns true when passed 5
+
 
     })
 })
-//Write a test for a function 'isTwo'.
+// //#11
+// describe('isEven', function (){
+//     it ("should be a defined function", function(){
+//         expect(typeof isEven(n % 2 == 0)).toBe('function')
+// })
+//
+// it('should return a boolean value when passed any number', function () {
+//     expect(typeof isEven()).toBe('boolean');
+// })
