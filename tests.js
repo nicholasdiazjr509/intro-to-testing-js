@@ -18,7 +18,7 @@ describe('sayHello', function (){
         expect(typeof sayHello).toBe('function');  //test for sayHello function
     })
     it('should never return undefined', function (){
-        expect(typeof sayHello()).not.toBe('undefined')
+        expect(typeof sayHello()).not.toBe('undefined');
     })
     it('should return a string', function (){
         expect(typeof sayHello()).toBe('string');
@@ -37,25 +37,32 @@ describe('isFive', function () {
         expect(typeof isFive).toBe('function');
     })
     it('should  pass in the string 5? ', function () {
-        expect(typeof isFive(5)).toBe('boolean')
+        expect(typeof isFive(5)).toBe('boolean');
         //Ensure that isFive returns a boolean no matter what the input
+
     })
-        it('should return a false when a 5 is passed', function(){
-            expect( typeof isFive(5) .toBe(''))
-    })
-    it("should return true or false when passed a '5' ", function() {
-        expect(typeof isFive('')).toBe('boolean')
+    it("should return a boolean when passed a empty string ", function() {
+        expect(typeof isFive('')).toBe('boolean');
 //Ensure that isFive returns true when passed 5
 
 
     })
 })
 // //#11
-// describe('isEven', function (){
-//     it ("should be a defined function", function(){
-//         expect(typeof isEven(n % 2 == 0)).toBe('function')
-// })
-//
-// it('should return a boolean value when passed any number', function () {
-//     expect(typeof isEven()).toBe('boolean');
-// })
+describe('isEven', function () {
+    it("should be a defined as a function", function () {
+        expect(typeof isEven).toBe('function');
+    })
+
+    it('returns a boolean no matter the input', function () {
+        expect(typeof isEven()).toBe('boolean');
+
+    })
+    it('returns true when executed with isEven(2)', function () {
+        expect(typeof isEven ('2')).toBe('boolean');
+    })
+    it ('returns true when executed with isEven(-4)', function(){
+        expect(typeof isEven('-4')).toBe('boolean');
+
+    })
+})
