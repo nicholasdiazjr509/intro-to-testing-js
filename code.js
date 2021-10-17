@@ -15,5 +15,5 @@ function isFive(input){
 }
 
  function isEven(input){
-     return input ==='';
+     return  input === '';
  }

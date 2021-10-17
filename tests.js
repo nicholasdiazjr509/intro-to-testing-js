@@ -38,7 +38,10 @@ describe('isFive', function () {
     })
     it('should  pass in the string 5? ', function () {
         expect(typeof isFive(5)).toBe('boolean');
+    })
         //Ensure that isFive returns a boolean no matter what the input
+    it("should return a boolean no matter what input", function (){
+      expect(typeof isFive(5*"5")).toBe('boolean');
 
     })
     it("should return a boolean when passed a empty string ", function() {
@@ -48,14 +51,14 @@ describe('isFive', function () {
 
     })
 })
-// //#11
+//#11
 describe('isEven', function () {
-    it("should be a defined as a function", function () {
+    it('should be a defined as a function', function () {
         expect(typeof isEven).toBe('function');
     })
 
     it('returns a boolean no matter the input', function () {
-        expect(typeof isEven()).toBe('boolean');
+        expect(typeof isEven(2*"2")).toBe('boolean');
 
     })
     it('returns true when executed with isEven(2)', function () {
@@ -65,4 +68,7 @@ describe('isEven', function () {
         expect(typeof isEven('-4')).toBe('boolean');
 
     })
+    it('should return false when called with isEven("banana")', function () {
+        expect(typeof isEven === ("banana")).toBe(false);
+    });
 })
